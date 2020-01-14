@@ -13,6 +13,10 @@
 
 \newcommand{\etal}{\textit{et al.}}
 
+% Block Quotes \quote{your_text_here}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+
 \begin{document}
 
 \maketitle
@@ -31,7 +35,7 @@
     This paper won the Best Paper award in the Public Policy Track at the 2019 NeurIPS Joint Workshop on AI for Social Good.
     
     % Do Artifacts have Politics?
-    Langdon Winner's seminal essay \textit{Do Algorithms Have Politics?}\cite{winnerArtifactsHavePolitics1980} explores the claim implied by the title. He posits that artifacts have politics in two distinct ways: as being designed explicitly for some purpose, which reflects the politics of the inventor (the atom bomb, corsets, the Internet, etc.), and as being implicitly reliant \textit{or} implicitly encouraging of specific politics (nuclear power and authoritarianism, solar power and democracy, etc.).
+    Langdon Winner's seminal essay \textit{Do Algorithms Have Politics?}\cite{winnerArtifactsHavePolitics1980} explores the claim implied by the title. He posits that artifacts have politics in two distinct ways: as being designed explicitly for some purpose, which reflects the politics of the inventor (the atom bomb, corsets, the Internet, etc.), and as being implicitly reliant \textit{or} implicitly encouraging of specific politics (nuclear power and authoritarianism, solar power and democracy, etc.). It's one of the most-cited STS papers in this space (ethical CS, critical CS, etc.), and is definitely worth reading.
 
 \section{Critical Computer Science Research}
     
@@ -45,7 +49,19 @@
 \section{Computer Science Pedagogy}
     
     % Implementing a Tenth Strand
-    \textit{Implementing a Tenth Strand in the CS Curriculum} by Martin \etal \cite{martinImplementingTenthStrand1996} offers motivation and suggestions for integrating ethics into computer science curriculum. While the case they make is mechanistic and ignorant of feminism and critical race theory, it demonstrates a concerted effort to integrate ethics in computer science education for well over two decades. This paper is most useful when viewed as a general overview of how we might integrate discussion, rather than a specific roadmap.
+    \subsection{Implementing a Tenth Strand}
+        \textit{Implementing a Tenth Strand in the CS Curriculum} by Martin \etal \cite{martinImplementingTenthStrand1996} offers motivation and suggestions for integrating ethics into computer science curriculum.
+        Having been clearly influenced by Schneiderman's keynote address to the ACM SIGCAS Conference \cite{shneidermanHumanValuesFuture1990},
+        the case they make is prescriptive of specific ethical values. Though they do not cite feminists or critical race theorists, they do recommend deep integration of ethics with computer science, and call to focus some points that are often ignored in CS classrooms:
+        \begin{quote}
+        Five basic elements of social analysis are: 1) the social context influences the development and use of technology, 2) power relations are central in all social interaction, 3) technology embodies the values of the developers, 4) populations are always diverse, and 5) empirical data is crucial to the design and development processes.
+        \end{quote}
+        The authors' sentiment towards modularity is somewhat confusing - they advocate for deep integration of ethical and technical discussion with ``ethics modules''.
+        This paper is most useful when viewed as a general overview of how we might integrate discussion, rather than a specific roadmap - it is designed to serve as a set of guidelines for all CS curricula writers.
+        
+    \subsection{Integrating Ethics within ML Courses}
+        \textit{Integrating Ethics within Machine Learning}, by Saltz \etal \cite{saltzIntegratingEthicsMachine2019}, is a recent paper which obviously focuses on machine learning curricula. They specifically highlight the lack of ``ethics'' (the term most commonly used in this space) discussions within classes related to machine learning (including data science and AI).
+        
     
 %\begin{figure}[h!]
 %\centering
